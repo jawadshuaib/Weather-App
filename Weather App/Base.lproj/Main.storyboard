@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter City Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEa-7I-kD4">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Toronto, CA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMr-uN-yxG">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKQ-RV-hqu">
+                                <state key="normal" title="Get Weather">
+                                    <color key="titleShadowColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getWeatherInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fkC-Qq-P1x"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAN-he-Xfn">
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eEa-7I-kD4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="87" id="1FD-06-00v"/>
+                            <constraint firstItem="EKQ-RV-hqu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6ap-XT-TxD"/>
+                            <constraint firstItem="BAN-he-Xfn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CMS-e4-2fo"/>
+                            <constraint firstAttribute="trailing" secondItem="BAN-he-Xfn" secondAttribute="trailing" id="G9C-fj-Sd8"/>
+                            <constraint firstItem="EKQ-RV-hqu" firstAttribute="top" secondItem="UMr-uN-yxG" secondAttribute="bottom" constant="26" id="Lds-A1-Inw"/>
+                            <constraint firstItem="UMr-uN-yxG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mus-js-OMB"/>
+                            <constraint firstItem="eEa-7I-kD4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OFf-Hv-MYd"/>
+                            <constraint firstItem="eEa-7I-kD4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c49-FU-yH8"/>
+                            <constraint firstItem="UMr-uN-yxG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iTk-Vd-PSa"/>
+                            <constraint firstItem="EKQ-RV-hqu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oFl-kv-t1M"/>
+                            <constraint firstItem="UMr-uN-yxG" firstAttribute="top" secondItem="eEa-7I-kD4" secondAttribute="bottom" constant="25" id="qrz-7Y-Ls3"/>
+                            <constraint firstItem="BAN-he-Xfn" firstAttribute="top" secondItem="EKQ-RV-hqu" secondAttribute="bottom" constant="38" id="sZh-C7-P4T"/>
+                            <constraint firstItem="BAN-he-Xfn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wHH-AD-uRr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputText" destination="UMr-uN-yxG" id="2kk-Rh-ixX"/>
+                        <outlet property="resultLabel" destination="BAN-he-Xfn" id="qH8-yk-TAL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
